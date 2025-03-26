@@ -14,7 +14,7 @@ import { KivansaglistamComponent } from './wishlist/kivansaglistam/kivansaglista
 import { KapcsolatComponent } from './contact-us/kapcsolat/kapcsolat.component';
 import { FooldalComponent } from './main-page/fooldal/fooldal.component';
 import { KosarComponent } from './cart/kosar/kosar.component';
-import { RegistrationComponent } from './account/registration/registration.component';
+import { RegistrationComponent } from './registration/registration.component';
 import { LoginComponent } from './account/login/login.component';
 import { CheckoutComponent } from './checkout/checkout/checkout.component';
 

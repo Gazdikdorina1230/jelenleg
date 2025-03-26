@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ProductlistComponent } from './productlist/productlist.component';
-import { provideHttpClient } from '@angular/common/http';
+import {  provideHttpClient } from '@angular/common/http'; // Importáld az HttpClientModule-t
 import { FormsModule } from '@angular/forms';
 import { ChipsekComponent } from './products/chipsek/chipsek.component';
 import { GumicukrokComponent } from './products/gumicukrok/gumicukrok.component';
@@ -23,7 +23,7 @@ import { KapcsolatComponent } from './contact-us/kapcsolat/kapcsolat.component';
 import { KivansaglistamComponent } from './wishlist/kivansaglistam/kivansaglistam.component';
 import { KosarComponent } from './cart/kosar/kosar.component';
 import { LoginComponent } from './account/login/login.component';
-import { RegistrationComponent } from './account/registration/registration.component';
+import { RegistrationComponent } from './registration/registration.component';
 import { fantaComponent } from './brands/fanta/fanta/fanta.component';
 import { ArizonaComponent } from './brands/arizona/arizona/arizona.component';
 import { bazookaComponent } from './brands/bazooka/bazooka/bazooka.component';
@@ -54,7 +54,7 @@ import { FooldalComponent } from './main-page/fooldal/fooldal.component';
     AppComponent,
     NavbarComponent,
     ProductlistComponent,
-    
+
     FiokomComponent,
     KapcsolatComponent,
     FooldalComponent,
@@ -94,7 +94,7 @@ import { FooldalComponent } from './main-page/fooldal/fooldal.component';
     CheckoutComponent,
     CandyListComponent,
     CandiesComponent
-    
+
   ],
   imports: [
     BrowserModule,
@@ -107,7 +107,7 @@ import { FooldalComponent } from './main-page/fooldal/fooldal.component';
     AngularFireModule.initializeApp(environments.firebaseConfig),
     AngularFireDatabaseModule,
     AngularFireAuthModule
-
+    
   ],
   providers: [provideHttpClient()],
   bootstrap: [AppComponent]

@@ -1,0 +1,19 @@
+
+  <h2>Regisztráció</h2>
+  <label for="email">Email</label>
+  <input [(ngModel)]="email" type="text" id="email" formControlName="email" required>
+
+  <label for="password">Jelszó</label>
+  <input [(ngModel)]="password" type="text" id="password" formControlName="password" required>
+
+  <label for="confirmPassword">Jelszó megerősítése</label>
+  <input [(ngModel)]="password" type="text" id="confirmPassword" formControlName="confirmPassword" required>
+
+  <button type="submit" (ngSubmit)="register()">Regisztrálok</button>
+  <button type="submit" (click)="registerwithgoogle()">Regisztrálok Googléval</button>
+
+
+
+
+
+
