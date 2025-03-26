@@ -2,16 +2,16 @@
 
 <div class="cart-container" *ngIf="cartItems && cartItems.length; else emptyCart">
   <div class="checkout-container">
-    <button class="checkout-btn">Pénztárhoz</button>
+    <button (click)="goCheckOut()" class="checkout-btn">Pénztárhoz</button>
   </div>
   
   <div *ngFor="let item of cartItems">
     <div class="cart-item">
       <p>{{ item.name }}</p>
-      <p>Mennyiség: {{ item.quantity }}</p>
+      <p>Mennyiség: {{ item.mennyiseg }}</p>
       <p>Egységár: {{ item.price }} Ft</p>
-      <p>Összesen: {{ item.quantity * item.price }} Ft</p>
-      <button (click)="removeFromCart(item.id)">Eltávolítás</button>
+      <p>Összesen: {{ item.mennyiseg * item.price }} Ft</p>
+      <button (click)="removeFromCart(item.key)">Eltávolítás</button>
     </div>
   </div>
 

@@ -2,13 +2,13 @@
   <h2>Rendelés leadása</h2>
 
   <div>
-    <label for="firstName">Keresztnév</label>
-    <input id="firstName" [(ngModel)]="order.firstName" name="firstName" required />
+    <label for="lastName">Vezetéknév</label>
+    <input id="lastName" [(ngModel)]="order.lastName" name="lastName" required />
   </div>
 
   <div>
-    <label for="lastName">Vezetéknév</label>
-    <input id="lastName" [(ngModel)]="order.lastName" name="lastName" required />
+    <label for="firstName">Keresztnév</label>
+    <input id="firstName" [(ngModel)]="order.firstName" name="firstName" required />
   </div>
 
   <div>
@@ -17,8 +17,13 @@
   </div>
 
   <div>
-    <label for="email">Email cím</label>
-    <input id="email" type="email" [(ngModel)]="order.email" name="email" required email />
+    <label for="city">Város</label>
+    <input id="city" [(ngModel)]="order.city" name="city" required />
+  </div>
+
+  <div>
+    <label for="city">Utca</label>
+    <input id="city" [(ngModel)]="order.city" name="city" required />
   </div>
 
   <div>
@@ -27,8 +32,8 @@
   </div>
 
   <div>
-    <label for="city">Város</label>
-    <input id="city" [(ngModel)]="order.city" name="city" required />
+    <label for="email">Email cím</label>
+    <input id="email" type="email" [(ngModel)]="order.email" name="email" required email />
   </div>
 
   <div>
@@ -40,13 +45,6 @@
   <button type="submit" class="kosar-gomb" [disabled]="orderForm.invalid || isSubmitting">Rendelés leadása</button>
 </form>
 
-
-<p *ngIf="successMessage" class="success-message">
+<div *ngIf="successMessage" class="notification">
   {{ successMessage }}
-</p>
-
-
-
-
-
-
+</div>

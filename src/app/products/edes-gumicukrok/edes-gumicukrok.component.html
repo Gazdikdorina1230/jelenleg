@@ -2,27 +2,30 @@
   <button (click)="sortProducts('low-to-high')">
     <i class="bi bi-arrow-down"></i> Legolcsóbbak
   </button>
-  
+
   <button (click)="sortProducts('high-to-low')">
     <i class="bi bi-arrow-up"></i> Legdrágábbak
   </button>
 </div>
 
 <div class="edes-gumicukrok-lista">
-  <div *ngFor="let gumicukor of gumicukrok; let i = index" class="edes-gumicukrok-item">
-    <div class="edes-gumicukrok-card">
-      <h3>{{ gumicukor.nev }}</h3>
-      <img [src]="gumicukor.image" [alt]="gumicukor.nev" class="edes-gumicukrok-kep">
-      <p class="leiras"> {{ gumicukor.leiras }} </p>
-      <p class="ar">Ár: {{ gumicukor.ar }} Ft</p>
-      <div class="mennyiseg">
-        Mennyiség: <input type="number" [(ngModel)]="gumicukor.darab" min="1">
+  <ng-container *ngFor="let candy of candies; let i = index">
+    <div *ngIf="candy.category === 'sweet_gummies'" class="edes-gumicukrok-item">
+      <div class="edes-gumicukrok-card">
+        <h3>{{ candy.name }}</h3>
+        <img [src]="candy.picture" [alt]="candy.name" class="edes-gumicukrok-kep"> 
+
+        <p class="leiras"> {{ candy.description }} </p>
+        <p class="ar">Ár: {{ candy.ar }} Ft</p>
+        <div class="mennyiseg">
+          Mennyiség: <input type="number" #inputQuantity min="1" value="1">
+        </div>
+        <button class="kosar-gomb" (click)="kosarbaRak(candy, inputQuantity.value)">
+          Kosárba rakom
+        </button>
       </div>
-      <button class="kosar-gomb" (click)="kosarbaRak(i)">
-        Kosárba rakom
-      </button>
     </div>
-  </div>
+  </ng-container>
 </div>
 
 <div *ngIf="showNotification" class="notification">

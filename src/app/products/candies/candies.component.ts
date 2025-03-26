@@ -13,10 +13,11 @@ export class CandiesComponent {
 
   constructor(private cartService: CartService, private cdr: ChangeDetectorRef) {}
 
-  kosarbaRak(candy: any) {
+  kosarbaRak(candy: any, quantity_in: string) {
     const termek = {
       ...candy,       
-      picture: candy.picture  
+      picture: candy.picture,
+      quantity: parseInt(quantity_in)
     };
     
     this.cartService.addToCart(termek);  
@@ -41,13 +42,12 @@ export class CandiesComponent {
     }
   }
   
-  
-  
 
   scrollToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 }
+
 
 
 

@@ -16,14 +16,15 @@ export class CheckoutComponent {
       this.isSubmitting = true;
       this.successMessage = 'Rendelés sikeresen leadva!';
 
-
       setTimeout(() => {
         this.isSubmitting = false; 
         form.resetForm(); 
-      }, 500);
+        window.location.href = 'http://localhost:4200';
+      }, 4000);
     }
   }
 }
+
 
 
 
